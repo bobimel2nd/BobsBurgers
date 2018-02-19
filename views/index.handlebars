@@ -10,14 +10,14 @@
 					<div class="row">
 						<div class="col-sm-2">
 							{{#unless locked}}
-		<button type="button" title="{{description}}" class="btn btn-secondary btn-xs" value="trash" id={{id}}>Trash It</button>
+								<button type="button" class="btn btn-secondary btn-xs" value="trash" id={{id}}>Trash It</button>
 							{{/unless}}
 						</div>
-						<div class="col-sm-8">
+						<div class="col-sm-8" title="{{description}}">
 							{{burger_name}}
 						</div>
 						<div class="col-sm-2">
-		<button type="button" title="{{description}}" class="btn btn-secondary btn-xs" value="devour" id={{id}}>Devour</button>
+							<button type="button" class="btn btn-secondary btn-xs" value="devour" id={{id}}>Devour</button>
 						</div>
 					</div>
 				{{/each}}
@@ -33,14 +33,14 @@
 				{{#each eaten}}
 					<div class="row">
 						<div class="col-sm-2">
-		<button type="button" title="{{description}}" class="btn btn-secondary btn-xs" value="grill" id={{id}}>Grill It</button>
+							<button type="button" class="btn btn-secondary btn-xs" value="grill" id={{id}}>Grill It</button>
 						</div>
-						<div class="col-sm-8">
+						<div class="col-sm-8" title="{{description}}">
 							{{burger_name}}
 						</div>
 						<div class="col-sm-2">
 							{{#unless locked}}
-		<button type="button" title="{{description}}" class="btn btn-secondary btn-xs" value="trash" id={{id}}>Trash It</button>
+								<button type="button" class="btn btn-secondary btn-xs" value="trash" id={{id}}>Trash It</button>
 							{{/unless}}
 						</div>
 					</div>
