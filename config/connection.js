@@ -14,8 +14,8 @@ var myRemoteHost = {
 
 // var connection = mysql.createConnection(myLocalHost);
 // var connection = mysql.createConnection(process.env.JAWSDB_URL || myLocalHost);
-// var connection = mysql.createConnection(myRemoteHost);
-var connection = mysql.createConnection(process.env.JAWSDB_URL || myLocalHost);
+var connection = mysql.createConnection(myRemoteHost);
+// var connection = mysql.createConnection(process.env.JAWSDB_URL || myLocalHost);
 
 connection.connect(function(err) {
   if (err) {
