@@ -14,7 +14,7 @@ app.use(bodyParser.json())
 app.use(bodyParser.urlencoded({ extended: true }))
 
 // Specify the port.
-process.env.PORT || 3000
+var port = process.env.PORT || 3000
 
 // Set Handlebars as the default templating engine.
 app.engine("handlebars", exphbs({ defaultLayout: "main" }))
@@ -23,5 +23,6 @@ app.set("view engine", "handlebars")
 require("./routes/apiRoutes")(app)
 
 // Initiate the listener.
-console.log("App listening on PORT: " + port)
+console.log("App listening on PORT: " + var connection = mysql.createConnection(myRemoteHost);
+)
 app.listen(port)
