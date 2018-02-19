@@ -1,0 +1,14 @@
+INSERT INTO burgers (locked, burger_name, description) VALUES (1, 'Tunami Burger', 'A portmanteau of the words "tuna" and "tsunami."');
+INSERT INTO burgers (locked, burger_name, description) VALUES (1, 'Pepper Don\'t Preach Burger', 'A pun on the 1986 song by Madonna entitled "Papa Don\'t Preach."');
+INSERT INTO burgers (locked, burger_name, description) VALUES (1, 'Rest in Peas Burger', 'A pun on the phrase "rest in peace," and a reference to the death of the cow, Moolissa');
+INSERT INTO burgers (locked, burger_name, description) VALUES (1, 'Fig-eta Bout It Burger', 'A pun on the phrase "Forget about it."');
+INSERT INTO burgers (locked, burger_name, description) VALUES (1, 'Last of the Mo-Jicama Burger', 'A pun on The Last of the Mohicans.');
+INSERT INTO burgers (locked, burger_name, description) VALUES (1, 'Olive And Let Die Burger', 'A reference to the 1973 James Bond film Live and Let Die.');
+INSERT INTO burgers (locked, burger_name, description) VALUES (1, 'Thank God It\'s Fried Egg Burger', ' A play on the saying "Thank God it\'s Friday".');
+INSERT INTO burgers (locked, burger_name, description) VALUES (1, 'Salvador Cauliflower Burger', 'A reference to the Spanish painter Salvador Dalí.');
+INSERT INTO burgers (locked, burger_name, description) VALUES (1, 'Shoot out at the Okra Corral Burger', 'A reference to the events of Gunfight at the O.K. Corral, a 1957 Western.');
+INSERT INTO burgers (locked, burger_name, description) VALUES (1, 'I\'ve Created a Muenster Burger', 'A reference to a Frankenstein quote.');
+INSERT INTO burgers (locked, burger_name, description) VALUES (1, 'One Fish, Two Fish, Red Fish Hamburger', 'A reference to Dr. Seuss book One Fish, Two Fish, Red Fish, Blue Fish.');
+INSERT INTO burgers (locked, burger_name, description) VALUES (1, 'The Roquefort Files Burger', 'A pun on the TV series [The Rockford Files].');
+INSERT INTO burgers (locked, burger_name, description) VALUES (1, 'Not If I Can Kelp It Burger', 'A play on "Not if I can help it."');
+INSERT INTO burgers (locked, burger_name, description) VALUES (0, 'New Burger', 'Unknown Burger');

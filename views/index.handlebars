@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<div class="row">
+	<div class="col-sm-6">
+		<div class="panel panel-primary">
+			<div class="panel-heading">
+				<h2 class="panel-title"><i class="fa">Burgers Ready to Eat</i></h2>
+			</div>
+			<div class="panel-body panel-margin">
+				{{#each ready}}
+					<div class="row">
+						<div class="col-sm-2">
+							{{#unless locked}}
+		<button type="button" title="{{description}}" class="btn btn-secondary btn-xs" value="trash" id={{id}}>Trash It</button>
+							{{/unless}}
+						</div>
+						<div class="col-sm-8">
+							{{burger_name}}
+						</div>
+						<div class="col-sm-2">
+		<button type="button" title="{{description}}" class="btn btn-secondary btn-xs" value="devour" id={{id}}>Devour</button>
+						</div>
+					</div>
+				{{/each}}
+			</div>
+		</div>
+	</div>
+	<div class="col-sm-6">
+		<div class="panel panel-primary">
+			<div class="panel-heading">
+				<h2 class="panel-title"><i class="fa">Burgers Already Eaten</i></h2>
+			</div>
+			<div class="panel-body panel-margin">
+				{{#each eaten}}
+					<div class="row">
+						<div class="col-sm-2">
+		<button type="button" title="{{description}}" class="btn btn-secondary btn-xs" value="grill" id={{id}}>Grill It</button>
+						</div>
+						<div class="col-sm-8">
+							{{burger_name}}
+						</div>
+						<div class="col-sm-2">
+							{{#unless locked}}
+		<button type="button" title="{{description}}" class="btn btn-secondary btn-xs" value="trash" id={{id}}>Trash It</button>
+							{{/unless}}
+						</div>
+					</div>
+				{{/each}}
+			</div>
+		</div>
+	</div>
+</div>
+
+<div class="row">
+	<div class="col-sm-4"></div>
+	<div class="col-sm-4">
+		<div class="panel panel-primary">
+			<div class="panel-heading">
+				<h2 class="panel-title"><i class="fa">Add New Burger</i></h2>
+			</div>
+			<div class="panel-body panel-margin">
+				<div class="row">
+					<div class="col-sm-4">Name:</div>
+					<div class="col-sm-8"><input type="text" id="name"></div>
+				</div>
+				<div class="row">
+					<div class="col-sm-4">Description:</div>
+					<div class="col-sm-8"><input type="text" id="description"></div>
+				</div>
+				<div class="row">
+					<button type="button" class="btn btn-primary btn-xs center-block" value="newBurger" id="submit">Submit Burger</button>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<script type="text/javascript">
+	$("button").on("click", function() {
+		var urls = "api/" + $(this).context.value
+		var data
+		if ($(this).context.id === "submit") {
+			data = {
+				name: $("#name").val(),
+				description: $("#description").val()
+			}
+		} else {
+			data = {
+				id: $(this).context.id
+			}
+		}
+	    $.post(urls, data, function(data) {
+            location.reload();
+	    });
+	})
+</script>
