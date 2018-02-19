@@ -23,6 +23,5 @@ app.set("view engine", "handlebars")
 require("./routes/apiRoutes")(app)
 
 // Initiate the listener.
-console.log("App listening on PORT: " + var connection = mysql.createConnection(myRemoteHost);
-)
+console.log("App listening on PORT: " + port)
 app.listen(port)
