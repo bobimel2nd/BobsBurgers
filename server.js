@@ -1,27 +1,24 @@
-var express = require("express")
-var exphbs = require("express-handlebars")
-var bodyParser = require("body-parser")
-const path = require('path')
-console.log(__dirname)
+const express = require("express")
+const exphbs = require("express-handlebars")
+const bodyParser = require("body-parser")
+const burgerRoutes = require('./controllers/burgers.js')
 
-// Create an instance of the express app.
-var app = express()
-app.use(express.static(path.join(__dirname, '/public/')))
-app.use(express.static(path.join(__dirname, '/public/assets/')))
-app.use(express.static(path.join(__dirname, '/public/assets/css/')))
-app.use(express.static(path.join(__dirname, '/public/assets/img/')))
+// Create an instance of the express app
+const app = express()
+app.use(express.static('public'))
 app.use(bodyParser.json())
 app.use(bodyParser.urlencoded({ extended: true }))
 
-// Specify the port.
-var port = process.env.PORT || 3000
+// Specify the port
+const port = process.env.PORT || 3000
 
 // Set Handlebars as the default templating engine.
 app.engine("handlebars", exphbs({ defaultLayout: "main" }))
 app.set("view engine", "handlebars")
 
-require("./routes/apiRoutes")(app)
+// Set the routes
+app.use(burgerRoutes)
 
-// Initiate the listener.
+// Initiate the listener
 console.log("App listening on PORT: " + port)
 app.listen(port)
